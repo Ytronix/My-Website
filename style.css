@@ -184,3 +184,11 @@ nav a.active{
     background: var(--primary-color);
 }
 
+.projects p{
+    margin: 15%;
+    font-size: 1.7rem;
+    text-align: justify;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    
+}
