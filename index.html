@@ -81,11 +81,11 @@
                 <p class="title">Front-End Developer | Design-Focused Developer | With Clean Code & Creative Vision</p>
             </div>
             <div class="mid_side">
-                <div class="about_card">
+                <div class="about_card" style="--clr:#f00">
                     <h5 class="about_title">About Me</h5>
                     <p>I'm a passionate front-end developer with a keen eye for detail and a strong focus on clean, responsive design. I'm constantly exploring new technologies, design patterns, and best practices to enhance user experience. When I'm not coding, you'll probably find me experimenting in Figma, reading about UI/UX trends, or sipping a strong cup of coffee while sketching the next idea.</p>                    
                 </div>
-                <div class="about_card">
+                <div class="about_card" style="--clr:#ff0">
                     <h5 class="about_title">Education</h5>
                     <p>BSc. in ABC</p>
                     <p><strong style="font-weight: 600;">XYZ University</strong>, XYZ</p>
@@ -97,17 +97,17 @@
                     <p>2022 – 2024</p>
                     <p>GPA: 5.00 | <strong>National Science Olympiad Participant</strong></p>
                 </div>
-                <div class="about_card">
+                <div class="about_card" style="--clr:#0ff">
                     <h5 class="about_title">Skills</h5>
                     <p>HTML, CSS, JavaScript,<br> Figma, Version Control (Git)</p>
                 </div>
             </div>
             <div class="right_side">
-                <div class="about_card">
+                <div class="about_card" style="--clr:#f0f">
                     <h5 class="about_title">Professional Summary</h5>
                     <p>Front-end developer skilled in HTML, CSS, and responsive design, with a growing command of JavaScript and UI/UX principles. Experienced in building modern, user-focused websites with clean code and design precision. Eager to contribute to collaborative projects and continuously sharpen skills in a fast-paced, creative environment.</p>
                 </div>
-                <div class="about_card">
+                <div class="about_card" style="--clr:#0f0">
                     <h5 class="about_title">Experience</h5>
                     <p><strong>Senior Developer in Google</strong></p>
                     <p>(2024-present)</p>
@@ -118,13 +118,26 @@
                     <p><strong>Intern in Google</strong></p>
                     <p>(2018-2019)</p>
                 </div>
-                <div class="about_card">
+                <div class="about_card" style="--clr:#afd">
                     <h5 class="about_title">Fun Facts</h5>
                     <p><strong style="font-weight: 600;">🔧 I can turn caffeine into code</strong> — seriously, my IDE runs on coffee and late-night bugs.</p>
-                    <p><strong style="font-weight: 600;">🌐 Self-taught explorer:</strong> I started coding from curiosity, and now I’m building web stuff with serious passion.</p>
+                    <p><strong style="font-weight: 600;">🌐 Self-taught explorer:</strong> I started coding from curiosity, and now I'm building web stuff with serious passion.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        let cards = document.querySelectorAll('.about_card');
+        cards.forEach(about_card => {
+            about_card.onmousemove = function(e){
+                const rect = about_card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                about_card.style.setProperty('--x', x + 'px');
+                about_card.style.setProperty('--y', y + 'px');
+            }})
+    </script>
 </body>
 </html>
