@@ -46,11 +46,6 @@ nav {
 nav .logo {
   width: var(--logo-size);
   margin-left: 3rem;
-  opacity: 0;
-  filter: blur(5px);
-  animation: navBlurIn 1s ease-out forwards;
-  animation-delay: 0.1s;
-  animation-fill-mode: forwards;
 }
 
 nav a {
@@ -61,11 +56,6 @@ nav a {
   color: var(--text-light);
   font-family: var(--font-heading);
   transition: all 0.3s ease;
-  opacity: 0;
-  filter: blur(5px);
-  animation: navBlurIn 1s ease-out forwards;
-  animation-delay: 0.1s;
-  animation-fill-mode: forwards;
 }
 
 nav a::after {
@@ -126,7 +116,6 @@ nav a.active {
   background-color: var(--bg-dark);
   padding: 2rem 0 2rem 0;
   box-shadow: 0.3rem 0.3rem 0 0 var(--shadow-color);
-  animation: floatIn 1.5s ease-out forwards;
 }
 
 .container .hero_title {
